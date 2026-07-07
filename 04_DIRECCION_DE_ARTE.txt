@@ -1,0 +1,161 @@
+CONCEPTO CENTRAL
+“TRAYECTORIA ESTRATÉGICA”
+
+El sistema visual debe representar:
+- Carrera.
+- Progreso.
+- Transición.
+- Posicionamiento.
+- Conexiones.
+- Decisiones de alto nivel.
+
+RECURSO PROPIO DE MARCA
+Usar los círculos rojos del logo como lenguaje visual:
+- Nodos.
+- Puntos de trayectoria.
+- Señales.
+- Hitos.
+- Conexiones.
+- Partículas discretas.
+- Máscaras circulares.
+
+No convertirlos en confeti ni decoración infantil.
+
+FONDO INTERACTIVO
+Crear un componente reusable tipo CareerTrajectoryBackground.
+
+Comportamiento:
+- SVG o DOM liviano, no canvas pesado salvo justificación.
+- Líneas finas y nodos derivados del logo.
+- Movimiento lento con parallax.
+- Reacción muy sutil al cursor en desktop.
+- Cambios de densidad según sección.
+- pointer-events: none.
+- Modo estático con prefers-reduced-motion.
+- Nunca competir con el texto.
+
+RITMO DE LA PÁGINA
+Alternar:
+- Blanco limpio.
+- Gris claro neutro.
+- Azul corporativo profundo.
+- Bloques editoriales con grandes títulos.
+- Secciones con aire abundante.
+
+No encerrar cada párrafo dentro de una card.
+
+DIRECCIÓN POR SECCIÓN
+
+1. HERO
+- Gran composición editorial asimétrica.
+- Logo visible arriba sin navbar.
+- H1 de alto impacto.
+- Subtítulo con ancho controlado.
+- Foto de Oscar o composición con imagen en plano secundario.
+- Nodos de trayectoria interactivos.
+- CTA muy visible.
+- Entrada inicial potente, no más de 1.4 s.
+- El contenido debe ser visible rápido, sin splash screen.
+
+2. BANNER
+- Panel amplio y cinematográfico.
+- Reveal mediante clip-path o máscara.
+- Leve parallax.
+- Bordes o marco muy limpio.
+- No tratarlo como una imagen pegada sin intención.
+
+3. LOGOS EMPRESA
+- Marquee horizontal infinito suave.
+- Todos los logos.
+- Monocromo/gris al reposo.
+- Recuperan contraste o color al hover.
+- Pausar al hover/focus.
+- Fade en laterales.
+- No deformar logos.
+
+4. EVALUACIÓN ESTRATÉGICA
+- Bloque editorial centrado o split.
+- Puede funcionar como “momento de decisión”.
+- CTA protagonista.
+- Gran espacio alrededor.
+
+5. PROBLEMAS
+- Presentar los 5 dolores como recorrido.
+- Opciones: panel sticky + lista, cards apiladas con línea de progreso o grilla editorial.
+- Cada ítem con interacción hover/focus discreta.
+- Cierre destacado, sin estilo motivacional.
+
+6. PROPUESTA
+- Gran sección split.
+- Texto + visual/imagen.
+- Uso de azul corporativo y blanco.
+- “IMPULSO LABORAL” debe sentirse como producto premium.
+- No usar stock nuevo.
+
+7. DIFERENCIADORES
+- Tres grandes bloques numerados.
+- Horizontal en desktop y vertical en mobile.
+- Aparición progresiva.
+- Titulares marcados con rojo.
+- El 50% debe tener énfasis tipográfico, sin inventar texto.
+
+8. MÉTRICAS
+- Fondo azul profundo.
+- Números y datos como protagonistas.
+- Animación numérica solo sobre cifras existentes.
+- No modificar valores.
+- Seis módulos con profundidad y líneas de conexión.
+
+9. TESTIMONIOS
+- Carrusel premium, no slider genérico.
+- Desktop: 2 cards visibles con una tercera insinuada o 3 si el ancho lo permite.
+- Tablet: 2.
+- Mobile: 1.
+- Drag / swipe.
+- Autoplay suave opcional.
+- Pausa al hover/focus.
+- Foto circular de alta calidad.
+- Estrellas discretas.
+- Tipografía legible.
+
+10. EMPODERA CONSULTING GROUP
+- Fondo azul profundo o transición azul.
+- Resolver como timeline de 20 años o lista de garantías.
+- No agregar fechas ni hitos nuevos.
+- Cada punto con microinteracción y línea de recorrido.
+
+11. CALENDARIO
+- Sección blanca y muy limpia.
+- Título + énfasis rojo.
+- Iframe dentro de marco premium.
+- Sombra suave.
+- Alto suficiente.
+- No tapar controles.
+- No aplicar transforms que rompan clics.
+
+12. OSCAR
+- Retrato editorial grande.
+- Copy al costado con jerarquía.
+- Nombre en rojo.
+- Puede usarse una línea de trayectoria que conecte foto y texto.
+- Evitar card pequeña.
+- Debe sentirse como sección de autoridad.
+
+13. MEDIOS
+- Tres tarjetas de video.
+- Miniaturas 16:9.
+- Overlay de play.
+- Hover con zoom sutil y borde rojo.
+- Modal accesible o reproducción inline.
+- No autoplay con sonido.
+
+ESTILO GENERAL
+- Premium editorial.
+- Mucho espacio negativo.
+- Tipografía fuerte.
+- Bordes suaves.
+- Profundidad controlada.
+- Interacción en cards, imágenes, CTA, logos y videos.
+- Animaciones visibles pero elegantes.
+- Nada de glow neón.
+- Nada de glassmorphism genérico en toda la página.

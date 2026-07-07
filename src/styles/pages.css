@@ -1,0 +1,1035 @@
+/* ============================================================
+   PÁGINAS INTERNAS — Impulso Laboral
+   Thank-You Page y Video Explicativo Page.
+   Usa íntegramente el sistema visual de tokens.css.
+   ============================================================ */
+
+/* ─── ENCABEZADO DE PÁGINA ──────────────────────────────────────────────────── */
+
+.page-header {
+  padding-block: clamp(28px, 4vw, 56px) clamp(24px, 3.5vw, 48px);
+  background: var(--empodera-white);
+  border-bottom: 1px solid var(--border-soft);
+  text-align: center;
+}
+
+.page-header__logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+.page-header__logo {
+  width: clamp(130px, 14vw, 178px);
+  height: auto;
+}
+
+/* Título bicolor: .page-header__title-red aplica rojo al prefijo */
+.page-header__title {
+  font-family: var(--font-head);
+  font-size: clamp(1.55rem, 1.15rem + 1.8vw, 2.75rem);
+  font-weight: 700;
+  color: var(--empodera-navy);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  max-width: 820px;
+  margin-inline: auto;
+  text-wrap: balance;
+}
+
+.page-header__title-red {
+  color: var(--empodera-red);
+}
+
+.page-header__subtitle {
+  margin-top: clamp(0.6rem, 1vw, 0.9rem);
+  max-width: 46ch;
+  margin-inline: auto;
+  color: var(--ink-soft);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  text-wrap: balance;
+}
+
+.thankyou-page .page-header__subtitle:first-of-type {
+  margin-top: clamp(0.95rem, 1.5vw, 1.25rem);
+}
+
+.thankyou-page .page-header__subtitle + .page-header__subtitle {
+  margin-top: clamp(0.5rem, 0.85vw, 0.75rem);
+}
+
+.page-header__accent-bar {
+  width: 40px;
+  height: 3px;
+  background: var(--empodera-red);
+  border-radius: 2px;
+  margin: clamp(0.9rem, 1.6vw, 1.3rem) auto 0;
+}
+
+/* ─── TÍTULOS DE PASOS ───────────────────────────────────────────────────────── */
+
+/* Prefijo "PASO X:" en rojo dentro de cualquier heading de paso.
+   Funciona con SectionHeading (hereda .heading__title color) en ambos fondos. */
+.ty-paso__prefix {
+  color: var(--empodera-red);
+}
+
+/* Reduce levemente el tamaño de los títulos de paso respecto al h2 estándar */
+.ty-paso .heading__title {
+  font-size: clamp(1.25rem, 1rem + 1.1vw, 1.85rem);
+}
+
+/* Para el Paso 2 el heading es más largo; controla el salto */
+.ty-paso--2 .heading__title {
+  max-width: 22ch;
+  text-wrap: balance;
+}
+
+.thankyou-page .ty-paso--2 .heading__title {
+  width: min(82%, 980px);
+  max-width: 980px;
+  margin-inline: auto;
+  font-size: clamp(1.18rem, 1rem + 0.85vw, 1.7rem);
+  line-height: 1.12;
+  text-wrap: pretty;
+}
+
+/* Espacio entre heading y descripción/video en las secciones de paso */
+.ty-paso .heading {
+  margin-bottom: clamp(18px, 2vw, 24px);
+}
+
+/* ─── SECCIÓN DE VIDEO (Paso 1 y Paso 4) ─────────────────────────────────────── */
+
+.ty-step-video__text {
+  max-width: 58ch;
+  margin-inline: auto;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  margin-bottom: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.thankyou-page .ty-step-video__text strong {
+  font-weight: 700;
+}
+
+/* ─── YOUTUBE EMBED ──────────────────────────────────────────────────────────── */
+
+.yt-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.yt-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.yt-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  margin-top: clamp(0.8rem, 1.5vw, 1.4rem);
+}
+
+/* ─── PASO 2 — LISTA NUMERADA 01–06 ─────────────────────────────────────────── */
+/* Visual inspirado en ImpactSection pero adaptado a fondo claro. */
+
+.ty-list {
+  width: 100%;
+  max-width: 900px;
+  margin: clamp(1.6rem, 3vw, 2.6rem) auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ty-list__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: clamp(72px, 5.5vw, 90px) minmax(0, 1fr);
+  align-items: center;
+  min-height: clamp(58px, 5vw, 72px);
+  border-bottom: 1px solid rgba(25, 56, 90, 0.1);
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.ty-list__item:last-child {
+  border-bottom: 0;
+}
+
+.ty-list__item:hover {
+  transform: translateX(4px);
+}
+
+.ty-list__num-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: stretch;
+}
+
+.ty-list__num {
+  color: var(--empodera-navy);
+  font-family: var(--font-head);
+  font-size: clamp(1.9rem, 1.6rem + 0.7vw, 2.5rem);
+  font-weight: 600;
+  line-height: 0.88;
+  letter-spacing: -0.025em;
+  opacity: 0.72;
+}
+
+.ty-list__rule {
+  flex: 0 0 auto;
+  width: 1.5px;
+  height: 28px;
+  margin: 0 clamp(0.65rem, 1vw, 0.9rem);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(191, 30, 45, 0.9),
+    transparent
+  );
+}
+
+.ty-list__text {
+  margin: 0;
+  padding: clamp(0.75rem, 1.2vw, 0.95rem) 0;
+  color: var(--ink);
+  font-size: clamp(0.94rem, 0.88rem + 0.18vw, 1.06rem);
+  font-weight: 400;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.ty-audience__closing {
+  margin-top: clamp(1.6rem, 3vw, 2.6rem);
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: clamp(1.1rem, 0.95rem + 0.65vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--empodera-navy);
+  text-transform: uppercase;
+}
+
+.thankyou-page .ty-audience__closing {
+  width: min(82%, 980px);
+  max-width: 980px;
+  margin-inline: auto;
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+  text-align: left;
+}
+
+.thankyou-page .ty-testi-oscar-separator {
+  width: clamp(48px, 5vw, 72px);
+  height: 2px;
+  margin: clamp(2rem, 3vw, 2.8rem) auto;
+  border-radius: 999px;
+  background: var(--empodera-red);
+}
+
+.thankyou-page .ty-media-wrap .media.section {
+  padding-bottom: clamp(28px, 3.4vw, 50px);
+}
+
+/* ─── PASO 3 — AVISOS ────────────────────────────────────────────────────────── */
+
+.ty-notices__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 1.3vw, 1rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+  max-width: 680px;
+  margin-inline: auto;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.ty-notice {
+  display: flex;
+  align-items: center;      /* Centra verticalmente el número con el texto */
+  gap: 1rem;
+  padding: clamp(0.85rem, 1.5vw, 1.1rem) clamp(1rem, 1.8vw, 1.4rem);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius-sm);
+}
+
+.ty-notice__num {
+  flex-shrink: 0;
+  width: 32px;             /* Fijo para garantizar el centrado vertical */
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--empodera-red);
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--empodera-white);
+  line-height: 1;
+  align-self: center;     /* Refuerza el centrado independientemente del texto */
+}
+
+.ty-notice__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--step-0);
+  line-height: 1.55;
+}
+
+/* ─── CIERRE FINAL ───────────────────────────────────────────────────────────── */
+
+.ty-closing-section.section {
+  padding-block: clamp(36px, 5vw, 72px);
+}
+
+.thankyou-page .ty-closing-section.section {
+  padding-top: clamp(30px, 3.8vw, 46px);
+  padding-bottom: clamp(18px, 2.6vw, 30px);
+}
+
+.ty-closing {
+  text-align: center;
+}
+
+.ty-closing__bar {
+  width: 40px;
+  height: 3px;
+  background: var(--empodera-red);
+  border-radius: 2px;
+  margin-inline: auto;
+  margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.ty-closing__headline {
+  font-family: var(--font-head);
+  font-size: clamp(1.9rem, 1.5rem + 2vw, 3.1rem);
+  font-weight: 700;
+  color: var(--empodera-white);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.thankyou-page .ty-closing__headline {
+  color: var(--empodera-navy);
+}
+
+/* ─── TEXTO LEGAL ────────────────────────────────────────────────────────────── */
+
+.page-legal {
+  padding-block: clamp(16px, 2.2vw, 24px);
+  text-align: center;
+  background: var(--empodera-white);
+  border-top: 1px solid var(--border-soft);
+}
+
+.page-legal__text {
+  max-width: 680px;
+  margin-inline: auto;
+  font-size: clamp(0.68rem, 0.64rem + 0.14vw, 0.78rem);
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.thankyou-page .page-legal--thankyou {
+  background: var(--empodera-light);
+  border-top: 0;
+  padding-block: clamp(12px, 2vw, 20px) clamp(18px, 2.5vw, 26px);
+}
+
+/* ─── FOOTER EXTENDIDO ───────────────────────────────────────────────────────── */
+/* Modifica el bloque central del .site-footer cuando extended=true.             */
+
+.site-footer__copy--extended {
+  white-space: normal;
+  text-align: center;
+}
+
+.site-footer__copy--extended p {
+  margin: 0;
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.46);
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+}
+
+.site-footer__copy--extended p + p {
+  margin-top: 0.15em;
+}
+
+/* ─── WISTIA WRAPPER ─────────────────────────────────────────────────────────── */
+
+.wistia-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  margin-top: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.wistia-player-container {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.wistia-player-container wistia-player {
+  display: block;
+  width: 100%;
+}
+
+/* ─── VIDEO EXPLICATIVO PAGE ─────────────────────────────────────────────────── */
+/* Composición unificada: fondo blanco continuo, sin franjas alternadas.          */
+
+.vexp-main {
+  background: var(--empodera-white);
+  padding-block: clamp(2.8rem, 5vw, 4.5rem) clamp(3rem, 5vw, 4.5rem);
+}
+
+.vexp-inner {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vexp-logo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.vexp-logo {
+  width: clamp(110px, 9vw, 145px);
+  max-width: 145px;        /* Seguro contra el ancho natural de la imagen */
+  height: auto;
+}
+
+.vexp-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.55rem, 1.15rem + 1.8vw, 2.6rem);
+  font-weight: 700;
+  color: var(--empodera-navy);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+  max-width: 700px;
+  margin-top: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.vexp-rule {
+  width: 40px;
+  height: 3px;
+  background: var(--empodera-red);
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: clamp(0.6rem, 0.9vw, 0.9rem);
+}
+
+.vexp-video-wrap {
+  width: 100%;
+  margin-top: clamp(2rem, 3.5vw, 3rem);
+}
+
+/* Anula margin-top y max-width que .wistia-wrap trae por defecto */
+.vexp-video-wrap .wistia-wrap {
+  margin-top: 0;
+  max-width: 100%;
+}
+
+.vexp-text {
+  max-width: 880px;
+  margin-inline: auto;
+  font-size: var(--step-0);
+  line-height: 1.6;
+  color: var(--ink);
+  text-align: center;
+  margin-top: clamp(28px, 3vw, 40px);
+  margin-bottom: clamp(0.9rem, 1.7vw, 1.5rem);
+}
+
+.vexp-text strong {
+  font-weight: 600;
+  color: var(--empodera-navy);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .ty-paso--2 .heading__title {
+    max-width: none;
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+  }
+
+  .ty-list__item {
+    grid-template-columns: 58px minmax(0, 1fr);
+    min-height: 60px;
+  }
+
+  .ty-list__num {
+    font-size: clamp(1.65rem, 7vw, 2.1rem);
+  }
+
+  .ty-list__rule {
+    height: 18px;
+    margin-inline: 0.52rem;
+  }
+
+  .ty-list__text {
+    font-size: 0.94rem;
+  }
+
+  .ty-closing__headline {
+    font-size: clamp(1.55rem, 7vw, 2.2rem);
+  }
+
+  .thankyou-page .ty-paso--2 .heading__title {
+    width: 100%;
+    max-width: none;
+    line-height: 1.14;
+  }
+
+  .thankyou-page .ty-audience__closing {
+    width: 100%;
+    max-width: none;
+  }
+
+  .thankyou-page .ty-media-wrap .media.section {
+    padding-bottom: clamp(24px, 6vw, 34px);
+  }
+
+  .thankyou-page .ty-closing-section.section {
+    padding-top: clamp(24px, 5vw, 32px);
+    padding-bottom: clamp(16px, 4vw, 24px);
+  }
+
+  /* Footer extendido: permite dos filas en tablet */
+  .site-footer__copy--extended p {
+    font-size: clamp(0.66rem, 2.2vw, 0.78rem);
+  }
+
+  /* Video Explicativo: ajustes en tablet */
+  .vexp-title {
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
+    max-width: 100%;
+  }
+
+  .vexp-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header__title {
+    font-size: clamp(1.2rem, 5.5vw, 1.6rem);
+  }
+
+  .yt-wrap,
+  .wistia-wrap {
+    max-width: 100%;
+  }
+
+  /* Video Explicativo: logo y padding compactos en mobile */
+  .vexp-logo {
+    width: clamp(90px, 25vw, 130px);
+    max-width: 130px;
+  }
+
+  .vexp-main {
+    padding-block: clamp(2rem, 6vw, 3rem) clamp(2rem, 5vw, 3rem);
+  }
+
+  .ty-list__item {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+
+  .ty-list__num {
+    font-size: 1.6rem;
+  }
+
+  .ty-list__rule {
+    margin-inline: 0.4rem;
+  }
+
+  .ty-notice {
+    align-items: flex-start;
+  }
+
+  .ty-notice__num {
+    margin-top: 0.1em;
+  }
+
+  .thankyou-page .ty-testi-oscar-separator {
+    margin: clamp(1.4rem, 6vw, 2rem) auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .thankyou-page .ty-paso--2 .heading__title {
+    width: min(100%, 31ch);
+    max-width: 31ch;
+    font-size: clamp(1.1rem, 4.8vw, 1.34rem);
+    line-height: 1.14;
+    text-wrap: balance;
+  }
+
+  .thankyou-page .ty-paso--3 .ty-notices__list {
+    width: 100%;
+    text-align: center;
+  }
+
+  .thankyou-page .ty-paso--3 .ty-notice {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .thankyou-page .ty-paso--3 .ty-notice__text {
+    text-align: center;
+  }
+
+  .thankyou-page .ty-paso--4 .heading {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .thankyou-page .ty-paso--4 .heading__title {
+    width: 100%;
+    max-width: 860px;
+    margin-inline: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ty-list__item {
+    transition: none;
+  }
+
+  .ty-list__item:hover {
+    transform: none;
+  }
+}
+
+/* ─── PASO LABEL ─────────────────────────────────────────────────────────────── */
+
+.step-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.72rem, 0.68rem + 0.15vw, 0.82rem);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--empodera-red);
+  margin-bottom: clamp(0.6rem, 1vw, 0.9rem);
+}
+
+.step-label::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--empodera-red);
+  border-radius: 2px;
+}
+
+/* ─── YOUTUBE EMBED ──────────────────────────────────────────────────────────── */
+
+.yt-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.yt-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.yt-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  margin-top: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+/* ─── PASO 1 / PASO 4 — SECCIONES DE VIDEO ──────────────────────────────────── */
+
+.ty-step-video__text {
+  max-width: 60ch;
+  margin-inline: auto;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: var(--step-0);
+  line-height: 1.65;
+  margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+/* ─── PASO 2 — LISTA DE PERFIL ───────────────────────────────────────────────── */
+
+.ty-audience__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(0.8rem, 1.5vw, 1.2rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.ty-audience__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: clamp(0.9rem, 1.6vw, 1.2rem) clamp(1rem, 1.8vw, 1.4rem);
+  background: var(--empodera-white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 4px 18px -8px rgba(16, 38, 61, 0.1);
+}
+
+.ty-audience__dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 0.38em;
+  border-radius: 50%;
+  background: var(--empodera-red);
+}
+
+.ty-audience__text {
+  color: var(--ink);
+  font-size: var(--step-0);
+  line-height: 1.55;
+}
+
+.ty-audience__closing {
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+  text-align: center;
+  font-family: var(--font-head);
+  font-size: clamp(1.15rem, 1rem + 0.7vw, 1.55rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--empodera-navy);
+  text-transform: uppercase;
+}
+
+/* ─── MÉTRICAS ───────────────────────────────────────────────────────────────── */
+
+.ty-metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.ty-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: clamp(1.2rem, 2.2vw, 1.8rem) clamp(0.8rem, 1.5vw, 1.2rem);
+  background: var(--empodera-white);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.ty-metric::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--empodera-red);
+  border-radius: 0 0 2px 2px;
+}
+
+.ty-metric__value {
+  font-family: var(--font-head);
+  font-size: clamp(2.2rem, 1.8rem + 2vw, 3.5rem);
+  font-weight: 700;
+  color: var(--empodera-red);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.ty-metric__label {
+  margin-top: 0.4rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.68rem, 0.65rem + 0.12vw, 0.78rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--empodera-navy);
+}
+
+/* ─── PASO 3 — AVISOS ────────────────────────────────────────────────────────── */
+
+.ty-notices__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.4vw, 1.1rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+  max-width: 680px;
+  margin-inline: auto;
+  text-align: left;
+}
+
+.ty-notice {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: clamp(0.85rem, 1.5vw, 1.1rem) clamp(1rem, 1.8vw, 1.4rem);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: var(--radius-sm);
+}
+
+.ty-notice__num {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--empodera-red);
+  font-family: var(--font-head);
+  font-size: 0.82rem;
+  font-weight: 700;
+  align-self: center;
+  color: var(--empodera-white);
+  line-height: 1;
+}
+
+.ty-notice__text {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--step-0);
+  line-height: 1.55;
+}
+
+/* ─── TESTIMONIOS GRID (sin carrusel) ────────────────────────────────────────── */
+
+.ty-testimonials__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.6rem);
+  margin-top: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+/* ─── CIERRE ─────────────────────────────────────────────────────────────────── */
+
+.ty-closing {
+  text-align: center;
+}
+
+.ty-closing__headline {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 1.6rem + 2vw, 3.2rem);
+  font-weight: 700;
+  color: var(--empodera-white);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1.05;
+}
+
+.ty-closing__sub {
+  margin-top: clamp(0.7rem, 1.2vw, 1rem);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: var(--step-1);
+  font-weight: 400;
+}
+
+/* ─── TEXTO LEGAL ────────────────────────────────────────────────────────────── */
+
+.page-legal {
+  padding-block: clamp(18px, 2.5vw, 28px);
+  text-align: center;
+  background: var(--empodera-white);
+  border-top: 1px solid var(--border-soft);
+}
+
+.page-legal__text {
+  max-width: 680px;
+  margin-inline: auto;
+  font-size: clamp(0.68rem, 0.64rem + 0.15vw, 0.78rem);
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.page-legal--vexp {
+  padding-block: clamp(10px, 1.5vw, 14px);
+}
+
+/* ─── FULL FOOTER ────────────────────────────────────────────────────────────── */
+
+.full-footer {
+  background: var(--empodera-navy-deep);
+  color: var(--empodera-white);
+  padding-block: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 40px);
+}
+
+.full-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(0.9rem, 1.6vw, 1.2rem);
+  text-align: center;
+}
+
+.full-footer__logo {
+  width: clamp(110px, 12vw, 154px);
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.full-footer__social {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.full-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.72);
+  transition: background 0.22s ease, color 0.22s ease;
+}
+
+.full-footer__social-link:hover,
+.full-footer__social-link:focus-visible {
+  background: var(--empodera-red);
+  color: var(--empodera-white);
+}
+
+.full-footer__divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.full-footer__address {
+  font-style: normal;
+  font-size: clamp(0.72rem, 0.68rem + 0.14vw, 0.82rem);
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+  max-width: 52ch;
+}
+
+.full-footer__copy {
+  font-size: clamp(0.74rem, 0.7rem + 0.14vw, 0.84rem);
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.full-footer__rights {
+  font-size: clamp(0.68rem, 0.64rem + 0.12vw, 0.76rem);
+  color: rgba(255, 255, 255, 0.38);
+  margin-top: -0.3rem;
+}
+
+/* ─── WISTIA WRAPPER ─────────────────────────────────────────────────────────── */
+
+.wistia-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+  margin-top: clamp(1.4rem, 2.5vw, 2.2rem);
+}
+
+.wistia-player-container {
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-lift);
+}
+
+.wistia-player-container wistia-player {
+  display: block;
+  width: 100%;
+}
+
+/* ─── VIDEO EXPLICATIVO — TEXTO ──────────────────────────────────────────────── */
+
+.vexp-text {
+  max-width: 62ch;
+  margin-inline: auto;
+  font-size: var(--step-1);
+  line-height: 1.7;
+  color: var(--ink);
+  text-align: center;
+  margin-top: clamp(1.6rem, 3vw, 2.6rem);
+}
+
+.vexp-text strong {
+  font-weight: 600;
+  color: var(--empodera-navy);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .ty-audience__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-metrics__grid {
+    grid-template-columns: 1fr;
+    max-width: 380px;
+    margin-inline: auto;
+  }
+
+  .ty-testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ty-closing__headline {
+    font-size: clamp(1.65rem, 7vw, 2.4rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header__title {
+    font-size: clamp(1.35rem, 6.5vw, 1.8rem);
+  }
+
+  .yt-wrap,
+  .wistia-wrap {
+    max-width: 100%;
+  }
+
+  .ty-notice {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

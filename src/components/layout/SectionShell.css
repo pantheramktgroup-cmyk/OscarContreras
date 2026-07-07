@@ -1,0 +1,9 @@
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section__inner {
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,317 @@
+AUTORIDAD DE CONTENIDO
+Este archivo define la estructura y el copy que debe respetarse.
+No resumir, corregir, reinterpretar ni reemplazar textos.
+Se permiten ajustes de saltos de línea responsivos, pero no cambios de redacción.
+
+ORDEN GENERAL DE LA PÁGINA
+
+==================================================
+SECCIÓN 1 — HERO
+==================================================
+
+Logo:
+Empodera (usar archivo oficial)
+
+H1:
+Alcanza tu próximo Cargo Estratégico en la mitad del tiempo
+
+Subtítulo:
+Impulso Laboral es el programa premium de Empodera para Altos Ejecutivos y Gerentes que buscan un nuevo desafío laboral con un método comprobado.
+
+Visual:
+Usar los assets disponibles, priorizando una composición premium con Oscar y/o banner.
+No agregar texto nuevo dentro del hero.
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 2 — VISUAL / BANNER DE IMPULSO LABORAL
+==================================================
+
+Usar:
+dist/assets/brand/banner.png
+
+Puede integrarse como panel cinematográfico, máscara animada, collage editorial o pieza visual con profundidad.
+No deformar ni recortar rostros de forma incorrecta.
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 3 — PORTAFOLIO DE CLIENTES
+==================================================
+
+Título:
+Nuestro portafolio de clientes incluye:
+
+Contenido:
+Usar todos los logos existentes en:
+dist/assets/logos_empresa
+
+No escribir nombres de empresas manualmente si los logos ya comunican la marca.
+
+==================================================
+SECCIÓN 4 — EVALUACIÓN ESTRATÉGICA
+==================================================
+
+Título:
+Agenda tu evaluación estratégica gratuita
+
+Texto:
+30 minutos para analizar tu posicionamiento y definir tu plan de acción profesional
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 5 — PROBLEMAS / EMPATÍA
+==================================================
+
+Título:
+Entendemos lo que estás viviendo:
+
+Ítems:
+- La necesidad de actualizarte frente a nuevos procesos de selección
+- Meses de búsqueda intensiva, pero sin resultados concretos
+- Ofertas que no cumplen tus expectativas
+- Dificultad para mostrar tu valor profesional
+- Cuentas con la experiencia, pero sin estrategia para proyectarla
+
+Cierre:
+Lo vemos cada día y sabemos cómo revertirlo.
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 6 — PROPUESTA DIFERENCIADORA
+==================================================
+
+Eyebrow / título de sección:
+Nuestra Propuesta Diferenciadora
+
+Título principal:
+IMPULSO LABORAL
+
+Texto 1:
+Un Programa de Empleabilidad exclusivo y personalizado para Altos Ejecutivos, Gerentes y Directivos.
+
+Texto 2:
+Desarrollamos junto a ti la estrategia para acelerar tu recolocación y acceder a cargos clave donde realmente puedas liderar.
+
+==================================================
+SECCIÓN 7 — POR QUÉ EMPODERA FUNCIONA
+==================================================
+
+Título:
+Por qué los programas tradicionales de Outplacement fallan (y por qué Empodera funciona)
+
+Introducción:
+Si estás evaluando opciones, es probable que te encuentres con las mismas promesas de siempre. Esto es lo que nos hace diferentes:
+
+Ítem 1 — título:
+No eres un número en un portal online:
+
+Ítem 1 — texto:
+Nuestro modelo es híbrido. Tendrás acompañamiento personalizado, cercano y la opción de reuniones presenciales.
+
+Ítem 2 — título:
+Garantía de Recolocación Real:
+
+Ítem 2 — texto:
+A diferencia de agencias que han eliminado su bono de recolocación, nosotros te garantizamos acompañamiento hasta tu recolocación y adaptación inicial.
+
+Ítem 3 — título:
+Involucramiento Directo de la Dirección:
+
+Ítem 3 — texto:
+El Director (Oscar Contreras) asume personalmente el 50% de la ejecución de tu programa. No te derivamos a asistentes sin experiencia.
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 8 — INDICADORES DE IMPACTO
+==================================================
+
+Título:
+Indicadores de Impacto del Programa
+
+Indicadores:
+- +60% logra entrevistas gerenciales en menos de 30 días
+- 7 de cada 10 negocian mejores sueldos —entre un 20%-30% superior—
+- Proceso de transición laboral más cortos.
+- En promedio nuestros clientes se reubican en menos de 90 días
+- Un 20% de ellos obtiene cargos más altos
+- 9 de cada 10 recomiendan el programa
+
+No corregir la redacción “Proceso de transición laboral más cortos.” porque debe respetarse el copy original.
+
+==================================================
+SECCIÓN 9 — TESTIMONIOS
+==================================================
+
+Título:
+Algunos de nuestros clientes que destacan:
+
+TESTIMONIO 1
+Nombre: Rodrigo Moletto Rossle
+Cargo: Gerente Comercial - Abastecimiento
+Texto: Realicé el programa de outplacement y fue todo un éxito. Muy profesional y con contenido muy valioso para tomar nuevos desafíos.
+Imagen: dist/assets/testimonios/rodrigo_moletto.webp
+
+TESTIMONIO 2
+Nombre: Jorge Olivares Silva
+Cargo: Gerente General - Consumo Masivo
+Texto: El acompañamiento de Empodera marcó la diferencia en un momento complejo. Fortalecí mi marca personal y amplié mi red. Obtuve el cargo de Gerente General.
+Imagen: dist/assets/testimonios/jorge_olivares_test.webp
+
+TESTIMONIO 3
+Nombre: Claudia Yu Ma
+Cargo: Growth Manager - Tecnología
+Texto: Gracias a Fórmula Empleo, recibí la orientación y herramientas necesarias. En tan solo dos meses, recibí una carta de oferta en el área que yo quería.
+Imagen: dist/assets/testimonios/claudia_yu.webp
+
+TESTIMONIO 4
+Nombre: Claudio Garnham
+Cargo: LATAM Senior Executive - Tecnología
+Texto: Recomiendo este acompañamiento personalizado. Logré posicionarme efectivamente en un cargo de alto nivel dentro de una empresa multinacional.
+Imagen: dist/assets/testimonios/claudio_garnham.webp
+
+TESTIMONIO 5
+Nombre: Lucia Chiuminatto Tapia
+Cargo: Key Account Manager - Minería
+Texto: Encontré no solo un nuevo empleo, sino una nueva dirección profesional. La empatía y el compromiso del equipo fueron clave para reubicarme con confianza.
+Imagen: dist/assets/testimonios/lucia_chiuminatto.webp
+
+TESTIMONIO 6
+Nombre: Alejandro Aedo Castillo
+Cargo: Gerente de Ingeniería - Minería
+Texto: Muy agradecido por la asesoría que recibí. Encontré una excelente posición de gerencia, y los consejos de ambos me dieron la base para hacer esto posible.
+Imagen: dist/assets/testimonios/alejandro_aedo.webp
+
+TESTIMONIO 7
+Nombre: Iván Flores Martínez
+Cargo: Director Financiero - Sector Industrial
+Extracto visible: En el papel, todos dicen que te acompañan. Pero en el caso de Fórmula Empleo, yo lo sentí desde el inicio: Al reubicarme en menos de 4 meses...
+Imagen: dist/assets/testimonios/ivan_flores.webp
+
+TESTIMONIO 8
+Nombre: Fabiola Contreras Henríquez
+Cargo: Gerente de proyectos e inversiones
+Extracto visible: Creo que pocas personas logran leer tan bien a las personas como Oscar, con él aprendí el gran salto que necesitaba en mi carrera, y sin duda alguna, tomar la consultoría con Empodera... fue la mejor inversión que...
+Imagen: dist/assets/testimonios/fabiola_contreras-1.webp
+
+REGLA PARA TEXTOS COMPLETOS
+Antes de usar extractos truncados, revisar el código/datos existentes del proyecto.
+- Si ya existe el texto completo, conservarlo exactamente.
+- Si no existe, usar el extracto visible tal cual.
+- No inventar la continuación.
+- No crear un “Leer más” que no tenga contenido real.
+- Si hay texto completo, el “Leer más” debe expandir accesiblemente.
+
+CTA idéntico:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+==================================================
+SECCIÓN 10 — EMPODERA CONSULTING GROUP
+==================================================
+
+Título:
+Empodera Consulting Group
+
+Subtítulo:
+20 años posicionando carreras ejecutivas en Chile, LATAM y Norteamérica
+
+Bloque 1 — título:
+Trayectoria en empleabilidad y desarrollo de carrera
+
+Bloque 1 — texto:
+Entendemos el mercado y cómo se mueve la búsqueda a tu nivel
+
+Bloque 2 — título:
+Acompañamiento a tu medida
+
+Bloque 2 — texto:
+Combinamos la agilidad digital con sesiones estratégicas Face-to-Face.
+
+Bloque 3 — título:
+Un solo Programa con todo incluido
+
+Bloque 3 — texto:
+Sin cobros extra. Sin porcentajes sobre tu sueldo
+
+Bloque 4 — título:
+Seguimiento 360°
+
+Bloque 4 — texto:
+Si tu transición toma más tiempo, seguimos contigo
+
+Bloque 5 — título:
+Claridad y experiencia real en el mercado
+
+Bloque 5 — texto:
+Sabemos lo que funciona y evitamos prácticas que no sirven para ejecutivos
+
+==================================================
+SECCIÓN 11 — CALENDARIO
+==================================================
+
+Título:
+¿Preparado para comenzar tu cambio laboral?
+
+Énfasis:
+¡Agendemos!
+
+Insertar el calendario real indicado en 07_ASSETS_Y_MULTIMEDIA.txt.
+
+==================================================
+SECCIÓN 12 — OSCAR CONTRERAS
+==================================================
+
+Título:
+¿Con quiénes te vas a reunir?
+
+Párrafo 1:
+Oscar Contreras, Fundador y Director de Empodera Consulting Group e impulsor del Programa Impulso Laboral.
+
+Párrafo 2:
+Ejecutivo con más de 20 años de experiencia en desarrollo de carrera y posicionamiento ejecutivo. Fue C-Level en Silicon Valley y desarrollador de programas experienciales para ejecutivos en colaboración con Northwestern University / Kellogg School of Business.
+
+Párrafo 3:
+Escritor y creador del Framework B2U, modelo de proyección y marketing estratégico para ejecutivos, integrando metodología estructurada, visión de mercado y acompañamiento personalizado para acelerar transiciones profesionales de alto impacto.
+
+Imágenes disponibles:
+- dist/assets/oscar/Oscar.jpg
+- dist/assets/oscar/oscar2.jpg
+
+Usar ambas solo si aportan valor real.
+Elegir la de mayor calidad y mejor encuadre para el hero.
+Reservar la otra para esta sección.
+No alterar rasgos ni aplicar filtros exagerados.
+
+==================================================
+SECCIÓN 13 — APARICIONES EN MEDIOS
+==================================================
+
+Título:
+Algunas apariciones en medios
+
+Video 1 — título:
+TVN Muy Buenos Días - La Autoestima
+Video 1 — URL:
+https://youtu.be/ZbiO5r7cCjQ?si=Vr3hPwwZz-rilclz
+
+Video 2 — título:
+El Abogado Vive TV - Marketing Personal
+Video 2 — URL:
+https://youtu.be/7XauvsQL5oc?si=RuBLu9qoWlW51oqz
+
+Video 3 — título:
+Radio La Clave - Fórmula Empleo
+Video 3 — URL:
+https://youtu.be/rPV1gSx5LGw?si=EW20qcDZyMEa1QXY
+
+No agregar videos extra.
+No reproducir automáticamente con sonido.

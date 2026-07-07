@@ -1,0 +1,79 @@
+CHECKLIST FUNCIONAL
+
+[ ] No existe navbar.
+[ ] El logo aparece correctamente.
+[ ] H1 único y exacto.
+[ ] El copy coincide con 03_ESTRUCTURA_Y_COPY_EXACTO.txt.
+[ ] No se inventaron frases.
+[ ] No se omitieron secciones.
+[ ] El orden general se mantiene.
+[ ] Todos los CTA usan el mismo componente.
+[ ] Todos los CTA tienen exactamente el mismo copy.
+[ ] Todos los CTA se ven iguales.
+[ ] Todos los CTA llevan a #agenda.
+[ ] El calendario funciona.
+[ ] El script del calendario carga una sola vez.
+[ ] El tracking externo carga una sola vez.
+[ ] Los 3 videos son correctos.
+[ ] Los videos no reproducen automáticamente con sonido.
+[ ] Se usan todos los logos de empresas.
+[ ] Se usan los 8 testimonios.
+[ ] Las imágenes corresponden a cada persona.
+[ ] No se inventó continuación de testimonios truncados.
+
+CHECKLIST VISUAL
+
+[ ] La página se siente premium y ejecutiva.
+[ ] Paleta Empodera respetada.
+[ ] Sin neón ni colores ajenos.
+[ ] Oswald en títulos.
+[ ] Avenir local coherente.
+[ ] Hero con impacto.
+[ ] Fondo interactivo sutil.
+[ ] Círculos de marca como recurso visual.
+[ ] Secciones con aire.
+[ ] No todo dentro de cards.
+[ ] CTA con entrada potente.
+[ ] Hover de CTA atractivo.
+[ ] Cards, logos, imágenes y videos con microinteracciones.
+[ ] Animaciones no distraen.
+[ ] No parece template.
+
+CHECKLIST TÉCNICO
+
+[ ] Build exitoso.
+[ ] Sin errores de consola.
+[ ] Sin warnings importantes.
+[ ] Sin imports desde dist en runtime.
+[ ] Assets correctos en producción.
+[ ] GSAP limpia al desmontar.
+[ ] ScrollTrigger no se duplica.
+[ ] Sin listeners huérfanos.
+[ ] Reduced motion implementado.
+[ ] Sin scroll horizontal.
+[ ] Sin CLS notable.
+[ ] Videos lazy-load.
+[ ] Imágenes lazy-load salvo hero.
+[ ] Fuentes no bloquean innecesariamente.
+
+CHECKLIST RESPONSIVE
+
+[ ] 1440 px correcto.
+[ ] 1280 px correcto.
+[ ] 1024 px correcto.
+[ ] 768 px correcto.
+[ ] 430 px correcto.
+[ ] 390 px correcto.
+[ ] 360 px correcto.
+[ ] CTA legible y sin overflow.
+[ ] Calendario usable en mobile.
+[ ] Carrusel usable con touch.
+[ ] Modales y controles accesibles.
+
+CRITERIO FINAL
+No considerar terminado hasta:
+1. Implementar.
+2. Ejecutar build.
+3. Corregir.
+4. Revisar breakpoints.
+5. Verificar calendario, tracking, videos y CTA.

@@ -1,0 +1,56 @@
+:root {
+  /* Paleta oficial Empodera */
+  --empodera-red: #bf1e2d;
+  --empodera-red-dark: #8f1722;
+  --empodera-navy: #19385a;
+  --empodera-navy-mid: #244f7d;
+  --empodera-navy-deep: #10263d;
+  --empodera-gray: #5d6770;
+  --empodera-light: #f2f2f2;
+  --empodera-white: #ffffff;
+
+  /* Derivados */
+  --border-soft: rgba(25, 56, 90, 0.12);
+  --border-strong: rgba(25, 56, 90, 0.22);
+  --ink: #10263d;
+  --ink-soft: #5d6770;
+
+  /* Layout */
+  --content-max: 1240px;
+  --gutter: clamp(20px, 5vw, 64px);
+
+  /* Radios */
+  --radius-lg: 28px;
+  --radius-md: 20px;
+  --radius-sm: 14px;
+  --radius-pill: 999px;
+
+  /* Sombras suaves y profundas */
+  --shadow-soft: 0 18px 40px -24px rgba(16, 38, 61, 0.35);
+  --shadow-lift: 0 32px 70px -30px rgba(16, 38, 61, 0.42);
+  --shadow-red: 0 22px 48px -20px rgba(191, 30, 45, 0.45);
+
+  /* Tipografía */
+  --font-head: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-body: 'Avenir LT Std', 'Segoe UI', system-ui, sans-serif;
+
+  /* Escala fluida (reducida para una composición más contenida) */
+  --step--1: clamp(0.75rem, 0.72rem + 0.15vw, 0.84rem);
+  --step-0: clamp(0.92rem, 0.88rem + 0.2vw, 1.02rem);
+  --step-1: clamp(1.05rem, 0.98rem + 0.35vw, 1.28rem);
+  --step-2: clamp(1.3rem, 1.15rem + 0.7vw, 1.72rem);
+  --step-3: clamp(1.65rem, 1.4rem + 1.25vw, 2.4rem);
+  --step-4: clamp(2rem, 1.65rem + 1.9vw, 3.1rem);
+  --step-5: clamp(2.4rem, 1.9rem + 2.9vw, 4rem);
+
+  /* Espaciado vertical de secciones (más contenido) */
+  --section-y: clamp(52px, 6.5vw, 108px);
+  --block-gap: clamp(22px, 3vw, 40px);
+
+  /* Distancia unificada entre el contenido y el CTA en toda la landing */
+  --cta-space: clamp(1.75rem, 3vw, 2.75rem);
+
+  /* Ancho de lectura para saltos de línea equilibrados */
+  --measure: 60ch;
+  --measure-tight: 46ch;
+}

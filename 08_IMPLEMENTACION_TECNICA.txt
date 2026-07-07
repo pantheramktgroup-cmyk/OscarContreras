@@ -1,0 +1,95 @@
+INSPECCIÓN INICIAL OBLIGATORIA
+Antes de editar:
+- Revisar package.json.
+- Revisar src/.
+- Revisar public/.
+- Revisar index.html.
+- Revisar estructura actual.
+- Revisar si existe React/Vite.
+- Revisar dependencias GSAP.
+- Revisar si los testimonios completos existen en código.
+- Revisar assets.
+- Revisar todos los SKILL.md de GSAP.
+
+REGLAS DE PROYECTO
+- Trabajar sobre el proyecto real.
+- No crear demo paralela.
+- No entregar solo un plan.
+- No editar archivos compilados de dist como solución final.
+- Conservar configuraciones útiles.
+- No romper build.
+- Instalar solo dependencias necesarias.
+
+STACK
+- React.
+- Vite si ya es el stack.
+- GSAP + ScrollTrigger.
+- CSS Modules, CSS organizado o sistema existente.
+- Evitar framework visual pesado.
+- Íconos solo si aportan valor real.
+
+DATOS
+Centralizar copy en un archivo de datos.
+No duplicar textos en componentes.
+Testimonios y videos desde arrays.
+
+ESTILOS
+- Variables CSS globales.
+- @font-face local.
+- clamp() para tipografía y espaciado.
+- Container queries opcionales.
+- Sin inline styles salvo necesidad puntual.
+- No usar !important salvo caso documentado.
+
+SEO BÁSICO
+- title específico.
+- meta description coherente, sin promesas nuevas.
+- lang="es".
+- Open Graph básico si el proyecto ya lo contempla.
+- Estructura semántica: header sin navbar, main, section, h1 único, h2 por sección.
+- Alt texts útiles.
+
+TRACKING
+Insertar script externo exacto una vez.
+
+CALENDARIO
+Insertar iframe y script exactos.
+Todos los CTA llevan a esta sección.
+
+YOUTUBE
+- No cargar todos los iframes al inicio.
+- Usar thumbnails.
+- Al clic, cargar embed.
+- Modo privacidad mejorada.
+- Respetar títulos.
+
+GSAP
+- Registrar plugins una vez.
+- Limpiar contextos.
+- Usar patrones React de skills.
+- Sin warnings.
+- No depender de selectores globales frágiles.
+
+ASSETS
+- No importar desde dist en runtime.
+- Copiar a carpeta fuente.
+- Mantener nombres o mapeo claro.
+- No perder calidad.
+- Verificar rutas en producción.
+
+BUILD FINAL
+- npm install si hace falta.
+- npm run build.
+- npm run lint si existe.
+- Corregir errores.
+- Revisar consola.
+- Confirmar imports.
+
+ENTREGA
+Claude debe dejar:
+- Landing terminada.
+- Código organizado.
+- Build exitoso.
+- Resumen de archivos modificados.
+- Decisiones relevantes.
+- Riesgos o pendientes reales.

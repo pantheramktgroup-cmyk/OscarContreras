@@ -1,0 +1,9 @@
+// Registro único de GSAP y plugins. Importar desde aquí en toda la app.
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, useGSAP);
+
+export { gsap, ScrollTrigger, ScrollToPlugin, useGSAP };

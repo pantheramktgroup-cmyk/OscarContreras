@@ -1,0 +1,43 @@
+PAQUETE DE ESPECIFICACIONES — REDISEÑO LANDING “IMPULSO LABORAL”
+Empodera Consulting Group / Oscar Contreras
+
+OBJETIVO
+Este paquete está diseñado para ser leído por Claude Code antes de modificar el proyecto.
+La implementación final debe realizarse en el proyecto actual ubicado en la raíz “Oscar-Contreras”.
+
+ORDEN OBLIGATORIO DE LECTURA
+1. 01_CONTEXTO_Y_OBJETIVO.txt
+2. 02_MARCA_Y_SISTEMA_VISUAL.txt
+3. 03_ESTRUCTURA_Y_COPY_EXACTO.txt
+4. 04_DIRECCION_DE_ARTE.txt
+5. 05_MOVIMIENTO_Y_GSAP.txt
+6. 06_COMPONENTES_E_INTERACCIONES.txt
+7. 07_ASSETS_Y_MULTIMEDIA.txt
+8. 08_IMPLEMENTACION_TECNICA.txt
+9. 09_RESPONSIVE_ACCESIBILIDAD_PERFORMANCE.txt
+10. 10_QA_Y_CRITERIOS_DE_ACEPTACION.txt
+11. 11_PROMPT_MAESTRO_CLAUDE.txt
+
+ANTES DE PROGRAMAR
+Claude debe leer también, de forma obligatoria, todos estos archivos:
+
+.claude/skills/gsap-core/SKILL.md
+.claude/skills/gsap-frameworks/SKILL.md
+.claude/skills/gsap-performance/SKILL.md
+.claude/skills/gsap-plugins/SKILL.md
+.claude/skills/gsap-react/SKILL.md
+.claude/skills/gsap-scrolltrigger/SKILL.md
+.claude/skills/gsap-timeline/SKILL.md
+.claude/skills/gsap-utils/SKILL.md
+
+REGLAS CRÍTICAS
+- No crear navbar.
+- No reescribir, resumir ni inventar copy.
+- Mantener el orden general de las secciones.
+- Se puede rediseñar completamente la disposición interna, tamaños, grillas, fondos, animaciones e interacción.
+- Debe existir un único componente de CTA, idéntico en todas sus apariciones.
+- Todos los CTA deben llevar al calendario.
+- No editar “dist” como fuente de la aplicación. “dist/assets” debe tratarse como repositorio de assets existentes y los archivos requeridos deben copiarse/importarse desde una ubicación fuente adecuada.
+- No incorporar stock externo aleatorio.
+- No hacer una estética motivacional genérica.
+- El resultado debe sentirse premium, editorial, ejecutivo, moderno y muy trabajado.

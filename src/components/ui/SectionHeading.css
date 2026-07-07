@@ -1,0 +1,42 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.45rem, 0.9vw, 0.75rem);
+}
+
+.heading--center {
+  align-items: center;
+  text-align: center;
+}
+
+.heading__eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: var(--step--1);
+  color: var(--empodera-red);
+}
+
+.heading__title {
+  font-size: var(--step-3);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.06;
+  text-wrap: balance;
+}
+
+.heading__mask {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+
+.heading__line {
+  display: block;
+}
+
+.heading--invert .heading__title {
+  color: var(--empodera-white);
+}

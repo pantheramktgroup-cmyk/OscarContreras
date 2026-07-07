@@ -1,0 +1,94 @@
+GUÍA DE MARCA EMPODERA
+
+PALETA OFICIAL
+- Rojo Empodera: #BF1E2D
+  Uso: CTA, énfasis, estados activos, detalles de alto impacto.
+- Gris Profesional: #5D6770
+  Uso: párrafos secundarios, detalles institucionales.
+- Azul Corporativo: #19385A
+  Uso: títulos, fondos destacados, grandes superficies oscuras.
+- Blanco: #FFFFFF
+  Uso: fondo base y limpieza.
+- Gris Claro Neutro: #F2F2F2
+  Uso: fondos suaves, separadores, cards claras.
+
+TONOS DERIVADOS PERMITIDOS
+Se pueden crear tintes y sombras exclusivamente derivados de la paleta:
+- Rojo oscuro aproximado: #8F1722
+- Azul medio aproximado: #244F7D
+- Azul muy oscuro aproximado: #10263D
+- Gris borde aproximado: rgba(25,56,90,0.12)
+No introducir colores fuera de este sistema salvo fotografías y miniaturas de video.
+
+LOGO
+- Archivo oficial: dist/assets/brand/logo.webp
+- No redibujar.
+- No deformar.
+- No aplicar efectos que reduzcan legibilidad.
+- Mantener zona de seguridad mínima.
+- Fondo preferido: blanco o neutro claro.
+- Puede aparecer al inicio de la landing, pero no dentro de una navbar.
+
+TIPOGRAFÍA SEGÚN MANUAL
+- Títulos web: Oswald.
+- Párrafos web: Proxima Nova.
+- Logo: Avenir.
+
+RESOLUCIÓN PRÁCTICA DE FUENTES
+Los archivos locales entregados son Avenir.
+Implementar:
+1. Oswald para H1–H6, cargada de forma confiable.
+2. Avenir local para cuerpo, UI, labels y botones mientras no existan archivos licenciados de Proxima Nova.
+3. Definir fallback claro y documentado.
+4. No recrear el logo con texto.
+
+ARCHIVOS LOCALES AVENIR
+- dist/assets/fonts/AvenirLTStd-Black.otf
+- dist/assets/fonts/AvenirLTStd-BlackOblique.otf
+- dist/assets/fonts/AvenirLTStd-Book.otf
+- dist/assets/fonts/AvenirLTStd-BookOblique.otf
+- dist/assets/fonts/AvenirLTStd-Heavy.otf
+- dist/assets/fonts/AvenirLTStd-HeavyOblique.otf
+- dist/assets/fonts/AvenirLTStd-Light.otf
+- dist/assets/fonts/AvenirLTStd-LightOblique.otf
+- dist/assets/fonts/AvenirLTStd-Medium.otf
+- dist/assets/fonts/AvenirLTStd-MediumOblique.otf
+- dist/assets/fonts/AvenirLTStd-Oblique.otf
+- dist/assets/fonts/AvenirLTStd-Roman.otf
+
+VOZ Y TONO
+- Claridad.
+- Profesionalismo.
+- Cercanía.
+- Lenguaje ejecutivo, directo y humano.
+- Estrategia personal, resultados y diferenciación.
+- Nada de frases motivacionales vacías.
+- Nada de promesas mágicas.
+- Nada de exageraciones que no existan en el copy original.
+
+SISTEMA DE DISEÑO RECOMENDADO
+- Contenedor principal: 1180–1280 px.
+- Secciones full-bleed con contenido centrado.
+- Cards: radio 20–28 px.
+- Botones: radio 14–18 px o pill moderada.
+- Sombras suaves y profundas, sin sombras duras.
+- Bordes de 1 px con transparencias de azul corporativo.
+- Espaciado vertical desktop: 112–160 px.
+- Espaciado tablet: 88–120 px.
+- Espaciado mobile: 64–88 px.
+- Tipografía fluida con clamp().
+- H1 grande, editorial y muy legible.
+- Body con máximo 65–72 caracteres por línea.
+
+TOKENS SUGERIDOS
+--empodera-red: #BF1E2D;
+--empodera-red-dark: #8F1722;
+--empodera-navy: #19385A;
+--empodera-navy-deep: #10263D;
+--empodera-gray: #5D6770;
+--empodera-light: #F2F2F2;
+--empodera-white: #FFFFFF;
+--content-max: 1240px;
+--radius-lg: 28px;
+--radius-md: 20px;
+--border-soft: rgba(25,56,90,0.12);

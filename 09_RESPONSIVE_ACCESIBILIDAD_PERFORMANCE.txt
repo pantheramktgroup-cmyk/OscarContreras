@@ -1,0 +1,69 @@
+BREAKPOINTS DE VALIDACIÓN
+- 1440 px.
+- 1280 px.
+- 1024 px.
+- 768 px.
+- 430 px.
+- 390 px.
+- 360 px.
+
+RESPONSIVE
+- Sin scroll horizontal.
+- H1 sin cortes absurdos.
+- CTA sin desbordar.
+- CTA ancho completo posible en mobile.
+- Calendario usable en mobile.
+- Videos 16:9.
+- Carrusel swipeable.
+- Logo marquee sin saltos.
+- Imágenes de Oscar bien encuadradas.
+- Espaciado fluido.
+
+ACCESIBILIDAD
+- WCAG AA en contraste.
+- Focus visible.
+- Navegación por teclado.
+- Botones reales.
+- aria-label en controles.
+- Modal de video accesible.
+- Escape cierra.
+- Focus trap.
+- Alt text.
+- No usar color como único indicador.
+- prefers-reduced-motion.
+- CTA con nombre accesible.
+- No ocultar contenido crítico con animación.
+
+REDUCED MOTION
+- Desactivar parallax.
+- Desactivar magnetismo.
+- Desactivar autoplay de carrusel.
+- Reveals simples o sin animación.
+- Mantener contenido visible.
+
+PERFORMANCE
+- Hero image con prioridad.
+- Resto lazy-load.
+- Aspect-ratio para evitar CLS.
+- font-display: swap.
+- Solo pesos usados.
+- No cientos de nodos.
+- Evitar filtros pesados.
+- Evitar sombras grandes animadas.
+- Transform y opacity.
+- Pausar fuera de viewport.
+- Lazy-load videos.
+- No usar WebGL salvo beneficio claro.
+
+OBJETIVOS PRÁCTICOS
+- LCP bajo.
+- CLS casi nulo.
+- Sin bloqueos largos.
+- 60 fps razonables.
+- Buen funcionamiento en móviles de gama media.
+
+CALENDARIO
+- No cortado.
+- No obligar a zoom.
+- Interacción táctil correcta.
+- Sin decoraciones sobre campos.

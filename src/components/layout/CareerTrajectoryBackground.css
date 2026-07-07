@@ -1,0 +1,37 @@
+.ctb {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.ctb__svg {
+  width: 110%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  will-change: transform;
+}
+
+.ctb__link {
+  stroke: rgba(25, 56, 90, 0.1);
+  stroke-width: 1;
+}
+
+.ctb__node {
+  fill: rgba(25, 56, 90, 0.16);
+}
+
+.ctb__node--accent {
+  fill: rgba(191, 30, 45, 0.42);
+}
+
+/* Sobre fondos oscuros no es necesario invertir: la capa es global y sutil. */
+
+@media (prefers-reduced-motion: reduce) {
+  .ctb__svg {
+    will-change: auto;
+  }
+}

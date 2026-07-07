@@ -1,0 +1,73 @@
+Trabaja directamente sobre el proyecto actual ubicado en la raíz “Oscar-Contreras” y construye la versión final de la landing de Impulso Laboral.
+
+NO me entregues solo un plan. Implementa el proyecto completo.
+
+ANTES DE TOCAR CÓDIGO, debes leer íntegramente y en este orden:
+
+- 00_LEEME_PRIMERO.txt
+- 01_CONTEXTO_Y_OBJETIVO.txt
+- 02_MARCA_Y_SISTEMA_VISUAL.txt
+- 03_ESTRUCTURA_Y_COPY_EXACTO.txt
+- 04_DIRECCION_DE_ARTE.txt
+- 05_MOVIMIENTO_Y_GSAP.txt
+- 06_COMPONENTES_E_INTERACCIONES.txt
+- 07_ASSETS_Y_MULTIMEDIA.txt
+- 08_IMPLEMENTACION_TECNICA.txt
+- 09_RESPONSIVE_ACCESIBILIDAD_PERFORMANCE.txt
+- 10_QA_Y_CRITERIOS_DE_ACEPTACION.txt
+
+También debes leer antes de programar:
+
+- .claude/skills/gsap-core/SKILL.md
+- .claude/skills/gsap-frameworks/SKILL.md
+- .claude/skills/gsap-performance/SKILL.md
+- .claude/skills/gsap-plugins/SKILL.md
+- .claude/skills/gsap-react/SKILL.md
+- .claude/skills/gsap-scrolltrigger/SKILL.md
+- .claude/skills/gsap-timeline/SKILL.md
+- .claude/skills/gsap-utils/SKILL.md
+
+Luego:
+
+1. Inspecciona package.json, src, public, index.html, assets e implementación actual.
+2. Revisa si existen copys completos de testimonios.
+3. Mantén el stack actual si ya es React/Vite.
+4. No edites “dist” como fuente final. Usa sus assets como material de origen.
+5. Implementa una landing de producción completa.
+6. Respeta exactamente copy y orden general.
+7. No crees navbar.
+8. No inventes contenido.
+9. Crea un único componente CTA con “QUIERO MI EVALUACIÓN ESTRATÉGICA”.
+10. Repite ese mismo componente donde corresponde; todas las instancias idénticas y hacia #agenda.
+11. Dale al CTA una entrada muy potente y hover premium.
+12. Implementa el fondo interactivo inspirado en nodos rojos del logo, con parallax y reduced-motion.
+13. Implementa todas las secciones con dirección editorial premium.
+14. Usa GSAP y ScrollTrigger correctamente y limpia contextos.
+15. Usa todos los logos de empresas.
+16. Usa los 8 testimonios con imágenes correctas.
+17. Inserta los 3 videos.
+18. Inserta el calendario real.
+19. Inserta el tracking externo exacto una sola vez.
+20. Optimiza responsive, accesibilidad y performance.
+21. Prueba breakpoints principales.
+22. Ejecuta build y lint si existe.
+23. Corrige errores antes de terminar.
+
+La página debe sentirse como una combinación controlada de Mento, The Ready, BetterUp, SYPartners, Linear/Stripe y recursos puntuales de Cuberto/Lusion, sin copiar ninguna web y respetando estrictamente la identidad Empodera.
+
+PRIORIDAD FINAL
+1. Conversión.
+2. Credibilidad ejecutiva.
+3. Dirección de arte.
+4. Claridad.
+5. Movimiento premium.
+6. Performance.
+7. Mantenibilidad.
+
+Cuando termines, informa:
+- Archivos creados/modificados.
+- Arquitectura final.
+- Dependencias agregadas.
+- Resultado de build.
+- Verificaciones realizadas.
+- Pendientes reales, solo si existen.

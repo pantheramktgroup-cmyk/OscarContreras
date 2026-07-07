@@ -1,0 +1,114 @@
+ARQUITECTURA DE COMPONENTES SUGERIDA
+
+src/
+  components/
+    layout/
+      SectionShell
+      BackgroundLayer
+    ui/
+      PrimaryCTA
+      SectionHeading
+      MediaCard
+      TestimonialCard
+      MetricCard
+      LogoMarquee
+      Reveal
+    sections/
+      HeroSection
+      BannerSection
+      ClientLogosSection
+      EvaluationSection
+      PainPointsSection
+      ProposalSection
+      DifferentiatorsSection
+      ImpactSection
+      TestimonialsSection
+      EmpoderaSection
+      BookingSection
+      OscarSection
+      MediaSection
+  data/
+    content
+  hooks/
+    useReducedMotion
+    usePointerCapability
+  styles/
+    tokens
+    fonts
+    globals
+
+No es obligatorio usar exactamente estos nombres, pero sí una separación equivalente.
+
+CTA ÚNICO
+Crear un único componente, por ejemplo <PrimaryCTA />.
+
+COPY EXACTO:
+QUIERO MI EVALUACIÓN ESTRATÉGICA
+
+COMPORTAMIENTO
+- Todas las instancias visualmente idénticas.
+- Mismo tamaño base.
+- Misma animación de entrada.
+- Mismo hover.
+- Mismo focus.
+- Mismo destino.
+- href o scroll a #agenda.
+- Offset correcto para mostrar el título del calendario.
+- No usar copys alternativos.
+- “>>” como chevrones decorativos, sin cambiar el texto accesible.
+- aria-label coherente.
+
+CARDS
+No aplicar el mismo efecto genérico a todo:
+- Diferenciadores: elevación + línea roja.
+- Métricas: profundidad azul sutil + desplazamiento.
+- Testimonios: tilt mínimo + expansión visual.
+- Videos: zoom + overlay de play.
+- Pain points: avance de nodo/índice.
+
+IMÁGENES
+- Lazy-load salvo hero.
+- Object-fit correcto.
+- Aspect-ratio definido.
+- No deformar.
+- No recortar caras agresivamente.
+- Alt descriptivo.
+- No filtros que cambien rasgos.
+
+TESTIMONIOS
+- Data-driven.
+- Una sola fuente de datos.
+- Cards accesibles.
+- Prev/next con aria-label.
+- Dots navegables si se usan.
+- Pausa hover/focus.
+- Swipe mobile.
+- No inventar texto.
+
+VIDEOS
+- Cards con título.
+- Miniatura de YouTube o existente.
+- Lazy embed.
+- Preferir youtube-nocookie.com.
+- No cargar tres iframes al inicio.
+- Cargar al clic o cerca del viewport.
+- Modal accesible: Escape, focus trap, devolver foco y backdrop.
+- No autoplay con audio.
+
+CALENDARIO
+- Contenedor con id="agenda".
+- Cargar script una sola vez.
+- Alto responsive.
+- Sin scroll interno cortado.
+- Sin decoraciones sobre el iframe.
+- Usable con teclado.
+
+LOGOS
+- Importar todos los archivos de dist/assets/logos_empresa.
+- No hardcodear lista incompleta si puede usarse import.meta.glob.
+- Orden estable.
+- Respetar proporciones.
+
+FOOTER
+No inventar footer con contenido no proporcionado.
+Si el proyecto existente ya posee uno, conservar solo si realmente forma parte de la landing.

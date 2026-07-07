@@ -1,0 +1,123 @@
+REQUISITO PREVIO
+Leer obligatoriamente todos los SKILL.md dentro de .claude/skills/gsap-*.
+
+OBJETIVO DEL MOVIMIENTO
+Hacer que la landing se sienta viva, premium y moderna.
+El movimiento debe reforzar avance, trayectoria, decisión, autoridad y transformación profesional.
+
+ARQUITECTURA
+- Registrar plugins una sola vez.
+- Usar gsap.context() o el patrón recomendado por gsap-react.
+- Limpiar animaciones y ScrollTriggers al desmontar.
+- Usar matchMedia() para desktop/tablet/mobile.
+- No crear listeners huérfanos.
+- Animar principalmente transform y opacity.
+- No abusar de will-change.
+- No bloquear render inicial.
+
+LENGUAJE DE MOVIMIENTO
+- Duraciones: 0.55–0.95 s.
+- Eases: power3.out, expo.out o equivalentes recomendados por los skills.
+- Stagger: 0.06–0.12 s.
+- Parallax: 8–24 px.
+- Escala hover cards: máximo 1.02–1.04.
+- Rotación hover: máximo 0.5–1 grado.
+- Nada de rebotes constantes.
+
+ANIMACIÓN INICIAL DEL HERO
+1. Logo: fade + desplazamiento breve.
+2. Nodos de marca: se conectan.
+3. H1: reveal por líneas o máscara.
+4. Subtítulo: fade/slide.
+5. Visual: clip reveal.
+6. CTA: entrada especial.
+Duración total: 1.1–1.4 s.
+El H1 no puede permanecer invisible demasiado tiempo.
+
+REVEALS
+- Usar ScrollTrigger.
+- Revelar al 15–25% del viewport.
+- Evitar animar cada palabra de párrafos largos.
+- Máscaras en títulos importantes.
+- Cards con stagger.
+- Imágenes con clip-path o scale controlado.
+- Fondos con transición suave.
+- El contenido debe permanecer visible si JS falla.
+
+CTA — ENTRADA MUY POTENTE
+Debe existir un solo componente reusable.
+
+Secuencia:
+1. Halo rojo expande detrás.
+2. Botón entra con scale aproximada 0.82 → 1.04 → 1.
+3. Chevrones avanzan.
+4. Sweep cruza una sola vez.
+5. Sombra se estabiliza.
+
+Duración: 0.75–0.95 s.
+- Ejecutar al entrar en viewport.
+- No repetir constantemente.
+- Mismo comportamiento en todas las instancias.
+- No pulsación infinita.
+- Reduced motion: opacity simple.
+
+CTA — HOVER
+- Magnetismo limitado a desktop/puntero fino.
+- Desplazamiento máximo 4–7 px.
+- Fondo rojo a rojo oscuro.
+- Halo discreto.
+- Chevrones avanzan 5–8 px.
+- Leve elevación.
+- Recuperación elástica controlada.
+- Texto siempre legible.
+- Focus visible.
+
+FONDO INTERACTIVO
+- Movimiento lento de nodos.
+- Reacción sutil al puntero.
+- Scroll parallax.
+- Máximo 20–30 elementos activos en desktop.
+- Menos en mobile.
+- Pausar/simplificar fuera de viewport.
+
+LOGO MARQUEE
+- Loop sin salto.
+- Velocidad lenta.
+- Pausa hover/focus.
+- Reduced motion: lista estática o scroll manual.
+
+MÉTRICAS
+Count-up solo sobre:
+- +60%
+- 7 de cada 10
+- 20%-30%
+- 90 días
+- 20%
+- 9 de cada 10
+El texto final debe coincidir exactamente con el copy.
+Ejecutar una sola vez.
+
+TESTIMONIOS
+- Carrusel suave.
+- Drag/swipe.
+- GSAP horizontalLoop si los skills lo recomiendan.
+- Pausa con interacción.
+- Velocidad que permita leer.
+- Reduced motion: scroll-snap sin autoplay.
+
+VIDEOS
+- Hover: zoom 1.02, overlay y play.
+- Modal: entrada suave, fondo oscuro, Escape cierra.
+- No autoplay hasta acción explícita.
+
+TRANSICIONES
+- Formas de marca o líneas de trayectoria.
+- Evitar ondas genéricas.
+- Pinning corto solo si aporta valor.
+- No abusar.
+- No impedir scroll natural.
+
+MOTION BUDGET
+- Una animación principal por sección.
+- Dos o tres microinteracciones por elemento interactivo.
+- Priorizar timing y calidad sobre cantidad.

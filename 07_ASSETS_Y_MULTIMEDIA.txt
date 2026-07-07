@@ -1,0 +1,92 @@
+REGLA GENERAL
+No editar “dist” directamente como fuente.
+Usar “dist/assets” como repositorio de archivos entregados.
+Copiar/importar assets a public/assets o src/assets según la arquitectura.
+
+ASSETS DE MARCA
+- dist/assets/brand/banner.png
+- dist/assets/brand/logo.webp
+
+OSCAR
+- dist/assets/oscar/Oscar.jpg
+- dist/assets/oscar/oscar2.jpg
+
+TESTIMONIOS
+- dist/assets/testimonios/alejandro_aedo.webp
+- dist/assets/testimonios/claudia_yu.webp
+- dist/assets/testimonios/claudio_garnham.webp
+- dist/assets/testimonios/fabiola_contreras-1.webp
+- dist/assets/testimonios/ivan_flores.webp
+- dist/assets/testimonios/jorge_olivares_test.webp
+- dist/assets/testimonios/lucia_chiuminatto.webp
+- dist/assets/testimonios/rodrigo_moletto.webp
+
+LOGOS DE EMPRESAS
+Carpeta: dist/assets/logos_empresa
+Usar todos los archivos de imagen existentes.
+No omitir arbitrariamente.
+No deformar.
+
+FUENTES
+- dist/assets/fonts/AvenirLTStd-Black.otf
+- dist/assets/fonts/AvenirLTStd-BlackOblique.otf
+- dist/assets/fonts/AvenirLTStd-Book.otf
+- dist/assets/fonts/AvenirLTStd-BookOblique.otf
+- dist/assets/fonts/AvenirLTStd-Heavy.otf
+- dist/assets/fonts/AvenirLTStd-HeavyOblique.otf
+- dist/assets/fonts/AvenirLTStd-Light.otf
+- dist/assets/fonts/AvenirLTStd-LightOblique.otf
+- dist/assets/fonts/AvenirLTStd-Medium.otf
+- dist/assets/fonts/AvenirLTStd-MediumOblique.otf
+- dist/assets/fonts/AvenirLTStd-Oblique.otf
+- dist/assets/fonts/AvenirLTStd-Roman.otf
+
+Definir @font-face correctamente.
+Usar font-display: swap.
+Cargar solo variantes usadas.
+
+VIDEOS
+
+1. TVN Muy Buenos Días - La Autoestima
+URL: https://youtu.be/ZbiO5r7cCjQ?si=Vr3hPwwZz-rilclz
+ID: ZbiO5r7cCjQ
+
+2. El Abogado Vive TV - Marketing Personal
+URL: https://youtu.be/7XauvsQL5oc?si=RuBLu9qoWlW51oqz
+ID: 7XauvsQL5oc
+
+3. Radio La Clave - Fórmula Empleo
+URL: https://youtu.be/rPV1gSx5LGw?si=EW20qcDZyMEa1QXY
+ID: rPV1gSx5LGw
+
+Usar youtube-nocookie.com.
+No autoplay con sonido.
+Lazy-load.
+
+CALENDARIO — CÓDIGO ORIGINAL
+
+<iframe src="https://links.iqautomated.io/widget/booking/CUSXuaCRyCHsDYMMm5qf" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="CUSXuaCRyCHsDYMMm5qf_1783260015446"></iframe>
+<script src="https://links.iqautomated.io/js/form_embed.js" type="text/javascript"></script>
+
+IMPLEMENTACIÓN REACT RECOMENDADA
+- Renderizar iframe como JSX.
+- Cargar form_embed.js una sola vez con useEffect o index.html.
+- Evitar dangerouslySetInnerHTML.
+- Evitar duplicar durante HMR.
+- Mantener src e id exactos.
+- Dar altura mínima responsive suficiente.
+- Verificar autoajuste de altura.
+
+TRACKING EXTERNO — CÓDIGO EXACTO
+
+<script
+  src="https://links.iqautomated.io/js/external-tracking.js"
+  data-tracking-id="tk_1182a9008054410d8c6f2539b29f96f3">
+</script>
+
+REGLA DE TRACKING
+- Insertar exactamente una vez.
+- Preferencia: index.html antes de </body> o ubicación indicada por la integración.
+- No cambiar data-tracking-id.
+- No duplicar en componentes.
+- Verificar en producción.

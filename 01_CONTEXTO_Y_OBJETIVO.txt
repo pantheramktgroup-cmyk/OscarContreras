@@ -1,0 +1,70 @@
+PROYECTO
+Landing comercial de “Impulso Laboral”, programa premium de Empodera Consulting Group, liderado por Oscar Contreras.
+
+PÚBLICO
+Altos ejecutivos, gerentes, directores y perfiles C-Level que buscan:
+- Recolocarse laboralmente.
+- Alcanzar cargos estratégicos.
+- Mejorar posicionamiento, marca personal y estrategia de búsqueda.
+- Reducir el tiempo de transición profesional.
+
+OBJETIVO PRINCIPAL DE LA LANDING
+Conseguir que el visitante agende una evaluación estratégica gratuita de 30 minutos.
+
+OBJETIVO DEL REDISEÑO
+Conservar estructura y contenido de la página actual, pero elevar radicalmente:
+- Dirección de arte.
+- Jerarquía visual.
+- Credibilidad.
+- Percepción premium.
+- Interacción.
+- Movimiento.
+- Claridad comercial.
+- Experiencia responsive.
+- Tasa de clic hacia el calendario.
+
+TECNOLOGÍA DESEADA
+- React.
+- GSAP.
+- ScrollTrigger.
+- Animaciones con timelines bien orquestadas.
+- Componentes reutilizables.
+- Código limpio, mantenible y orientado a producción.
+- Mantener el stack actual si ya existe React/Vite.
+- No agregar frameworks de UI innecesarios.
+
+PRINCIPIOS DE EXPERIENCIA
+- Profesional, no fría.
+- Moderna, no juvenil.
+- Potente, no estridente.
+- Dinámica, no caótica.
+- Humana, no genérica.
+- Ejecutiva, no “coach motivacional”.
+- Muy visual, sin sacrificar legibilidad.
+- El movimiento debe comunicar progresión, avance, posicionamiento y transición profesional.
+
+REFERENCIAS CONCEPTUALES
+La dirección debe combinar, sin copiar:
+- Mento: estructura humana y premium para coaching ejecutivo.
+- The Ready: narrativa editorial y tipografía protagonista.
+- BetterUp: métricas, autoridad y prueba social.
+- SYPartners: consultoría de alto nivel y composición sofisticada.
+- Linear / Stripe: profundidad, microinteracciones y fondos digitales controlados.
+- Cuberto / Lusion: efectos puntuales de cursor, máscara y scroll, usados con moderación.
+
+PROPORCIÓN DE INFLUENCIA RECOMENDADA
+- 40% Mento.
+- 25% The Ready.
+- 20% BetterUp.
+- 10% Linear / Stripe.
+- 5% Cuberto / Lusion.
+
+NO HACER
+- No usar un template SaaS genérico.
+- No usar gradientes violetas o neón ajenos a la marca.
+- No agregar frases inspiracionales.
+- No agregar navbar.
+- No convertir todo en cards pequeñas.
+- No usar animaciones infinitas molestas.
+- No usar scroll hijacking.
+- No hacer que el usuario espere una intro larga.
