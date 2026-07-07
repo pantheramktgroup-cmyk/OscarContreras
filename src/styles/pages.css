@@ -397,7 +397,8 @@
 
 .vexp-main {
   background: var(--empodera-white);
-  padding-block: clamp(2.8rem, 5vw, 4.5rem) clamp(3rem, 5vw, 4.5rem);
+  padding-top: clamp(2.8rem, 5vw, 4.5rem);
+  padding-bottom: clamp(1rem, 1.8vw, 1.5rem);
 }
 
 .vexp-inner {
@@ -462,7 +463,7 @@
   color: var(--ink);
   text-align: center;
   margin-top: clamp(28px, 3vw, 40px);
-  margin-bottom: clamp(0.9rem, 1.7vw, 1.5rem);
+   margin-bottom: clamp(0.3rem, 0.7vw, 0.6rem);
 }
 
 .vexp-text strong {
@@ -679,13 +680,28 @@
 /* ─── PASO 1 / PASO 4 — SECCIONES DE VIDEO ──────────────────────────────────── */
 
 .ty-step-video__text {
-  max-width: 60ch;
-  margin-inline: auto;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.82);
-  font-size: var(--step-0);
-  line-height: 1.65;
-  margin-bottom: clamp(1.2rem, 2vw, 1.8rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.4rem, 1.35vw, 1.2rem);
+
+    width: min(100%, 760px);
+    margin: clamp(1.25rem, 2vw, 1.7rem) auto 0;
+
+    color: rgba(255, 255, 255, 0.78);
+    font-size: clamp(1rem, 0.94rem + 0.18vw, 1.12rem);
+    line-height: 1.55;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.ty-step-video__text-block {
+    display: block;
+}
+
+.ty-step-video__text strong {
+    color: var(--empodera-white);
+    font-weight: 700;
 }
 
 /* ─── PASO 2 — LISTA DE PERFIL ───────────────────────────────────────────────── */
