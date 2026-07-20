@@ -7,7 +7,7 @@ import './PrimaryCTA.css';
 
 // Único componente de CTA. Todas las instancias son visualmente idénticas,
 // comparten animación de entrada, hover, focus y destino (#agenda).
-export default function PrimaryCTA({ className = '' }) {
+export default function PrimaryCTA({ className = '', disableMotion = false }) {
   const rootRef = useRef(null);
   const btnRef = useRef(null);
   const labelRef = useRef(null);
@@ -16,6 +16,8 @@ export default function PrimaryCTA({ className = '' }) {
 
   useGSAP(
     (context, contextSafe) => {
+      if (disableMotion) return;
+
       const btn = btnRef.current;
       if (!btn) return;
 
@@ -100,14 +102,14 @@ export default function PrimaryCTA({ className = '' }) {
         };
       }
     },
-    { scope: rootRef, dependencies: [reduced, finePointer] }
+    { scope: rootRef, dependencies: [reduced, finePointer, disableMotion] }
   );
 
   const handleClick = (e) => {
     const target = document.querySelector(CTA_TARGET);
     if (!target) return; // deja que el href navegue normalmente
     e.preventDefault();
-    if (reduced) {
+    if (reduced || disableMotion) {
       target.scrollIntoView();
     } else {
       gsap.to(window, {
@@ -122,7 +124,10 @@ export default function PrimaryCTA({ className = '' }) {
   };
 
   return (
-    <div className={`cta-wrap ${className}`} ref={rootRef}>
+    <div
+      className={`cta-wrap ${disableMotion ? 'cta-wrap--static' : ''} ${className}`.trim()}
+      ref={rootRef}
+    >
       <a
         ref={btnRef}
         href={CTA_TARGET}

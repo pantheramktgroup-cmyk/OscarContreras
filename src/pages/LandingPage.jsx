@@ -17,8 +17,9 @@ import Footer from '../components/layout/Footer.jsx';
 import '../styles/sections.css';
 
 // Contenido idéntico a la landing original. No se altera.
-export default function LandingPage() {
+export default function LandingPage({ landingVariant = 'A' }) {
   const appRef = useRef(null);
+  const isVariantB = landingVariant === 'B';
 
   useGSAP(() => {
     const onLoad = () => ScrollTrigger.refresh();
@@ -35,16 +36,27 @@ export default function LandingPage() {
       <main className="app" ref={appRef}>
         <HeroSection />
         <ClientLogosSection />
-        <EvaluationSection />
-        <PainPointsSection />
-        <ProposalSection />
-        <DifferentiatorsSection />
-        <ImpactSection />
-        <TestimonialsSection />
-        <EmpoderaSection />
-        <BookingSection />
-        <OscarSection />
-        <MediaSection />
+        {isVariantB ? (
+          <>
+            <BookingSection landingVariant={landingVariant} />
+            <TestimonialsSection />
+            <OscarSection />
+            <MediaSection />
+          </>
+        ) : (
+          <>
+            <EvaluationSection />
+            <PainPointsSection />
+            <ProposalSection />
+            <DifferentiatorsSection />
+            <ImpactSection />
+            <TestimonialsSection />
+            <EmpoderaSection />
+            <BookingSection landingVariant={landingVariant} />
+            <OscarSection />
+            <MediaSection />
+          </>
+        )}
       </main>
       <Footer />
     </>

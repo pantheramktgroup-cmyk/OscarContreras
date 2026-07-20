@@ -183,6 +183,41 @@
   background: rgba(255, 255, 255, 0.16);
 }
 
+.cta-wrap--static .cta {
+  transition: none;
+  translate: 0;
+  scale: 1;
+  will-change: auto;
+}
+
+.cta-wrap--static .cta::after {
+  transition: none;
+}
+
+.cta-wrap--static .cta:hover,
+.cta-wrap--static .cta:active {
+  translate: 0;
+  scale: 1;
+  filter: none;
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow:
+    0 18px 42px -20px rgba(191, 30, 45, 0.78),
+    0 7px 20px -11px rgba(143, 23, 34, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 -1px 0 rgba(90, 8, 17, 0.16);
+}
+
+.cta-wrap--static .cta__chevrons,
+.cta-wrap--static .cta:hover .cta__chevrons {
+  transition: none;
+  transform: none;
+}
+
+.cta-wrap--static .cta__halo,
+.cta-wrap--static .cta__sweep {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .cta-wrap {
     justify-content: flex-start;
