@@ -11,12 +11,23 @@ export default function BookingSection({ landingVariant }) {
   const iframeUrl = new URL(booking.iframeSrc);
   iframeUrl.searchParams.set('landing_variant', landingVariant);
 
+  // --- Pasar UTMs de la landing al iframe de GHL ---
+  const utmParams = new URLSearchParams(window.location.search);
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (param) {
+    var value = utmParams.get(param);
+    if (value) {
+      iframeUrl.searchParams.set(param, value);
+    }
+  });
+  // --- Fin UTMs ---
+
   return (
     <SectionShell id="agenda" tabIndex={-1} variant="white" className="booking">
       <Reveal className="booking__head" stagger>
-        <h2 className="booking__title">{booking.title}</h2>
-        <p className="booking__emphasis">{booking.emphasis}</p>
+        <h2 className="booking_title">{booking.title}</h2>
+        <p className="booking_emphasis">{booking.emphasis}</p>
       </Reveal>
+
       <div className="booking__layout">
         <aside className="booking__info" aria-label="Detalle de la reunión">
           <h3 className="booking__info-title">
