@@ -3,6 +3,7 @@ import { gsap, useGSAP } from '../../lib/gsap.js';
 import SectionShell from '../layout/SectionShell.jsx';
 import { brand, proposal } from '../../data/content.js';
 import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useLiteMotion } from '../../hooks/useLiteMotion.js';
 
 function TextWithHighlight({ text, highlight }) {
   if (!highlight || !text.includes(highlight)) {
@@ -25,6 +26,7 @@ function TextWithHighlight({ text, highlight }) {
 export default function ProposalSection() {
   const ref = useRef(null);
   const reduced = useReducedMotion();
+  const lite = useLiteMotion();
 
   useGSAP(
     () => {
@@ -84,7 +86,9 @@ export default function ProposalSection() {
           '-=0.28'
         );
 
-      if (aura) {
+      // En celular el halo queda quieto: animar un blur grande en bucle es de
+      // lo más caro para Safari de iPhone.
+      if (aura && !lite) {
         gsap.to(aura, {
           scale: 1.04,
           opacity: 0.34,
@@ -98,7 +102,7 @@ export default function ProposalSection() {
     },
     {
       scope: ref,
-      dependencies: [reduced],
+      dependencies: [reduced, lite],
     }
   );
 

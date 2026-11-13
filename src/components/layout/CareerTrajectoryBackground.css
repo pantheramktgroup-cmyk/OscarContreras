@@ -35,3 +35,10 @@
     will-change: auto;
   }
 }
+
+/* Modo liviano (celulares y tablets): el fondo queda quieto. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .ctb__svg {
+    will-change: auto;
+  }
+}

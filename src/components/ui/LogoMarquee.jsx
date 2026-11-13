@@ -1,14 +1,17 @@
 import { useRef } from 'react';
-import { gsap, useGSAP } from '../../lib/gsap.js';
+import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
 import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useLiteMotion } from '../../hooks/useLiteMotion.js';
 import './LogoMarquee.css';
 
 // Marquee horizontal infinito y suave. Pausa al hover/focus.
 // Reduced motion: scroll manual (overflow) sin autoplay.
+// Celulares: se mueve solo mientras está en pantalla (ver useLiteMotion).
 export default function LogoMarquee({ logos }) {
   const ref = useRef(null);
   const trackRef = useRef(null);
   const reduced = useReducedMotion();
+  const lite = useLiteMotion();
 
   useGSAP(
     () => {
@@ -25,6 +28,21 @@ export default function LogoMarquee({ logos }) {
       });
 
       const root = ref.current;
+
+      if (lite) {
+        // En celular no hay hover: el carrusel corre solo cuando se ve y se
+        // pausa al salir de pantalla, para no gastar mientras se baja.
+        tween.pause();
+        const visibility = ScrollTrigger.create({
+          trigger: root,
+          start: 'top bottom',
+          end: 'bottom top',
+          onToggle: (self) => (self.isActive ? tween.play() : tween.pause()),
+        });
+        if (visibility.isActive) tween.play();
+        return undefined;
+      }
+
       const pause = () => tween.pause();
       const play = () => tween.play();
       root.addEventListener('pointerenter', pause);
@@ -39,7 +57,7 @@ export default function LogoMarquee({ logos }) {
         root.removeEventListener('focusout', play);
       };
     },
-    { scope: ref, dependencies: [reduced] }
+    { scope: ref, dependencies: [reduced, lite] }
   );
 
   const items = reduced ? logos : [...logos, ...logos];

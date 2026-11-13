@@ -65,3 +65,12 @@
     transition: none;
   }
 }
+
+/* Modo liviano (celulares y tablets): sin el degradado de los bordes. Una
+   máscara sobre algo que se mueve se redibuja en cada cuadro en Safari. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .marquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
