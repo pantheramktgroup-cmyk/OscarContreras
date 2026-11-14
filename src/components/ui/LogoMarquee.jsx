@@ -1,21 +1,24 @@
-import { useRef } from 'react';
-import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
+import { useEffect, useRef } from 'react';
+import { gsap, useGSAP } from '../../lib/gsap.js';
 import { useReducedMotion } from '../../hooks/useReducedMotion.js';
 import { useLiteMotion } from '../../hooks/useLiteMotion.js';
 import './LogoMarquee.css';
 
 // Marquee horizontal infinito y suave. Pausa al hover/focus.
 // Reduced motion: scroll manual (overflow) sin autoplay.
-// Celulares: se mueve solo mientras está en pantalla (ver useLiteMotion).
+// Celulares (modo liviano): el movimiento lo hace una animación CSS, que no
+// ocupa el hilo de JS, y se pausa cuando el carrusel sale de pantalla.
 export default function LogoMarquee({ logos }) {
   const ref = useRef(null);
   const trackRef = useRef(null);
   const reduced = useReducedMotion();
   const lite = useLiteMotion();
+  const cssLoop = lite && !reduced;
+  const duration = Math.max(24, logos.length * 2.4);
 
   useGSAP(
     () => {
-      if (reduced) return;
+      if (reduced || lite) return;
       const track = trackRef.current;
       if (!track) return;
 
@@ -23,26 +26,11 @@ export default function LogoMarquee({ logos }) {
       const tween = gsap.to(track, {
         xPercent: -50,
         ease: 'none',
-        duration: Math.max(24, logos.length * 2.4),
+        duration,
         repeat: -1,
       });
 
       const root = ref.current;
-
-      if (lite) {
-        // En celular no hay hover: el carrusel corre solo cuando se ve y se
-        // pausa al salir de pantalla, para no gastar mientras se baja.
-        tween.pause();
-        const visibility = ScrollTrigger.create({
-          trigger: root,
-          start: 'top bottom',
-          end: 'bottom top',
-          onToggle: (self) => (self.isActive ? tween.play() : tween.pause()),
-        });
-        if (visibility.isActive) tween.play();
-        return undefined;
-      }
-
       const pause = () => tween.pause();
       const play = () => tween.play();
       root.addEventListener('pointerenter', pause);
@@ -60,14 +48,40 @@ export default function LogoMarquee({ logos }) {
     { scope: ref, dependencies: [reduced, lite] }
   );
 
+  useEffect(() => {
+    if (!cssLoop) return undefined;
+    const root = ref.current;
+    if (!root || typeof IntersectionObserver === 'undefined') return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        root.classList.toggle('is-paused', !entry.isIntersecting);
+      },
+      { rootMargin: '120px 0px' }
+    );
+    observer.observe(root);
+    return () => {
+      observer.disconnect();
+      root.classList.remove('is-paused');
+    };
+  }, [cssLoop]);
+
   const items = reduced ? logos : [...logos, ...logos];
+  const classes = [
+    'marquee',
+    reduced ? 'marquee--static' : '',
+    cssLoop ? 'marquee--css' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
 
   return (
-    <div
-      className={`marquee ${reduced ? 'marquee--static' : ''}`}
-      ref={ref}
-    >
-      <ul className="marquee__track" ref={trackRef}>
+    <div className={classes} ref={ref}>
+      <ul
+        className="marquee__track"
+        ref={trackRef}
+        style={cssLoop ? { '--marquee-duration': `${duration}s` } : undefined}
+      >
         {items.map((logo, i) => (
           <li className="marquee__item" key={`${logo.name}-${i}`}>
             <img

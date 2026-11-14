@@ -2,11 +2,11 @@ import { useRef } from 'react';
 import { gsap, useGSAP } from '../../lib/gsap.js';
 import SectionShell from '../layout/SectionShell.jsx';
 import { empodera } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 export default function EmpoderaSection() {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   const titleWords = empodera.title.trim().split(/\s+/);
   const titleAccent = titleWords[0];

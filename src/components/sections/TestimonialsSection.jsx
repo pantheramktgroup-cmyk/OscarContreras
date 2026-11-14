@@ -5,7 +5,7 @@ import SectionHeading from '../ui/SectionHeading.jsx';
 import TestimonialCard from '../ui/TestimonialCard.jsx';
 import PrimaryCTA from '../ui/PrimaryCTA.jsx';
 import { testimonials, testimonialsSection } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 // Carrusel premium con scroll-snap, drag en desktop, swipe en mobile,
 // autoplay suave con pausa en hover/focus. Reduced motion: sin autoplay.
@@ -14,7 +14,7 @@ export default function TestimonialsSection({ title, showCta = true }) {
   const headingTitle = title ?? testimonialsSection.title;
   const ref = useRef(null);
   const trackRef = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     (context, contextSafe) => {

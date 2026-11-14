@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 import './SectionHeading.css';
 
 // Título de sección con reveal por máscara. El texto permanece visible si JS falla.
@@ -14,7 +14,7 @@ export default function SectionHeading({
 }) {
   const Tag = as;
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     () => {

@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import { gsap, useGSAP } from '../../lib/gsap.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 // Anima (count-up) el PRIMER entero del texto, preservando el copy exacto.
 // El valor final coincide siempre con la cifra original.
 export default function MetricCard({ text }) {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   const match = text.match(/\d+/);
   const hasNumber = Boolean(match);

@@ -4,11 +4,11 @@ import SectionShell from '../layout/SectionShell.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import PrimaryCTA from '../ui/PrimaryCTA.jsx';
 import { painPoints } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 export default function PainPointsSection() {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     () => {

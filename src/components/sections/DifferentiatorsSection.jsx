@@ -4,7 +4,7 @@ import SectionShell from '../layout/SectionShell.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import PrimaryCTA from '../ui/PrimaryCTA.jsx';
 import { differentiators } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 // Resalta un fragmento (p. ej. "50%") sin inventar texto.
 function withEmphasis(text, emphasis) {
@@ -33,7 +33,7 @@ function withHighlight(text, marker, className) {
 
 export default function DifferentiatorsSection() {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     () => {

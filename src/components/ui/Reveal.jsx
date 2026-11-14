@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 // Reveal accesible: el contenido queda visible si JS falla (el estado inicial
 // oculto solo se aplica desde GSAP). Anima opacity + y al entrar en viewport.
@@ -15,7 +15,7 @@ export default function Reveal({
 }) {
   const Tag = as;
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     () => {

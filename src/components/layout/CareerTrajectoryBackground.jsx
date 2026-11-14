@@ -1,14 +1,14 @@
 import { useMemo, useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 import { usePointerCapability } from '../../hooks/usePointerCapability.js';
-import { useLiteMotion } from '../../hooks/useLiteMotion.js';
 import './CareerTrajectoryBackground.css';
 
 // Fondo de "trayectoria estratégica": nodos y líneas derivados de los círculos
 // rojos del logo. SVG liviano, parallax en scroll, reacción sutil al cursor en
-// desktop, estático con prefers-reduced-motion y en celulares (en Safari de
-// iPhone el bucle de los nodos trababa el scroll). pointer-events: none.
+// desktop, estático con prefers-reduced-motion y en celulares (ver
+// useStaticMotion: en Safari de iPhone el bucle trababa el scroll).
+// pointer-events: none.
 const VIEW_W = 1440;
 const VIEW_H = 1600;
 
@@ -57,9 +57,8 @@ export default function CareerTrajectoryBackground() {
   const rootRef = useRef(null);
   const groupRef = useRef(null);
   const svgRef = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
   const finePointer = usePointerCapability();
-  const lite = useLiteMotion();
 
   const count = useMemo(() => {
     if (typeof window !== 'undefined' && window.innerWidth < 768) return 14;
@@ -74,7 +73,7 @@ export default function CareerTrajectoryBackground() {
   useGSAP(
     (context, contextSafe) => {
       const group = groupRef.current;
-      if (!group || reduced || lite) return;
+      if (!group || reduced) return;
 
       const nodeEls = group.querySelectorAll('.ctb__node');
 
@@ -130,7 +129,7 @@ export default function CareerTrajectoryBackground() {
         cleanupPointer?.();
       };
     },
-    { scope: rootRef, dependencies: [reduced, finePointer, lite] }
+    { scope: rootRef, dependencies: [reduced, finePointer] }
   );
 
   return (

@@ -264,3 +264,26 @@
     transform: none;
   }
 }
+
+/* Modo liviano (celulares y tablets): el botón no se anima con JS, así que
+   no necesita capa propia. El brillo inferior se dibuja con un degradado en
+   vez de un desenfoque. */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .cta {
+    will-change: auto;
+  }
+
+  .cta::after {
+    background: radial-gradient(
+      closest-side,
+      rgba(191, 30, 45, 0.34),
+      rgba(191, 30, 45, 0)
+    );
+    filter: none;
+  }
+
+  .cta__sweep,
+  .cta__halo {
+    display: none;
+  }
+}

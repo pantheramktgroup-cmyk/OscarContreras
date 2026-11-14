@@ -3694,3 +3694,69 @@
         --hero-media-offset-x: 0px;
     }
 }
+
+/* ============================================================
+   MODO LIVIANO (celulares y tablets)
+   En Safari de iPhone los filter: blur() grandes son muy caros de dibujar
+   mientras se hace scroll. Acá los brillos decorativos se dibujan con
+   degradados radiales, que se ven casi igual y no cuestan.
+   Misma condición que useLiteMotion.js.
+   ============================================================ */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+    .hero::before {
+        border-color: transparent;
+        box-shadow: none;
+        background:
+            radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 58%),
+            radial-gradient(closest-side, rgba(242, 242, 242, 0.62), rgba(242, 242, 242, 0));
+        filter: none;
+    }
+
+    .hero__ambient,
+    .hero__ambient--red,
+    .hero__ambient--navy,
+    .hero__photo-bg {
+        filter: none;
+    }
+
+    .hero__media-outline {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    .pain::after {
+        background: radial-gradient(closest-side, rgba(191, 30, 45, 0.03), rgba(191, 30, 45, 0));
+        filter: none;
+    }
+
+    .pain__closing-panel::before {
+        width: 80%;
+        top: -150%;
+        left: -30%;
+        background: radial-gradient(closest-side, rgba(191, 30, 45, 0.07), rgba(191, 30, 45, 0));
+        filter: none;
+    }
+
+    .proposal__aura {
+        filter: none;
+    }
+
+    .impact::after {
+        width: clamp(640px, 85vw, 1100px);
+        right: -45%;
+        bottom: -60%;
+        background: radial-gradient(
+            closest-side,
+            rgba(191, 30, 45, 0.11),
+            rgba(191, 30, 45, 0.045) 50%,
+            rgba(191, 30, 45, 0)
+        );
+        filter: none;
+    }
+
+    .hero__visual,
+    .hero__visual-ring,
+    .oscar__portrait {
+        will-change: auto;
+    }
+}

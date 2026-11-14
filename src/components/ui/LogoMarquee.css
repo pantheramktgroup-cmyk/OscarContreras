@@ -74,3 +74,21 @@
     mask-image: none;
   }
 }
+
+/* Modo liviano: el carrusel se mueve con CSS (lo activa LogoMarquee.jsx). */
+.marquee--css .marquee__track {
+  animation: marquee-loop var(--marquee-duration, 48s) linear infinite;
+}
+
+.marquee--css.is-paused .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-loop {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}

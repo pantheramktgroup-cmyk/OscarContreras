@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { gsap, ScrollTrigger, useGSAP } from '../../lib/gsap.js';
 import { CTA_LABEL, CTA_TARGET } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 import { usePointerCapability } from '../../hooks/usePointerCapability.js';
 import './PrimaryCTA.css';
 
@@ -11,7 +11,7 @@ export default function PrimaryCTA({ className = '', disableMotion = false }) {
   const rootRef = useRef(null);
   const btnRef = useRef(null);
   const labelRef = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
   const finePointer = usePointerCapability();
 
   useGSAP(

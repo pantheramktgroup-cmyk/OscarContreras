@@ -3,7 +3,7 @@ import { gsap, useGSAP } from '../../lib/gsap.js';
 import SectionShell from '../layout/SectionShell.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import { impact } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 function parseValue(value) {
   if (!value) return null;
@@ -122,7 +122,7 @@ function renderHighlightedCopy(item) {
 
 export default function ImpactSection() {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
 
   useGSAP(
     () => {

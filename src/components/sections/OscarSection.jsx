@@ -3,7 +3,7 @@ import { gsap, useGSAP } from '../../lib/gsap.js';
 import SectionShell from '../layout/SectionShell.jsx';
 import SectionHeading from '../ui/SectionHeading.jsx';
 import { oscarSection, oscar } from '../../data/content.js';
-import { useReducedMotion } from '../../hooks/useReducedMotion.js';
+import { useStaticMotion } from '../../hooks/useStaticMotion.js';
 
 // Sección de autoridad: retrato editorial + copy con jerarquía.
 // Acepta overrides opcionales via props para reutilización en otras páginas.
@@ -13,7 +13,7 @@ export default function OscarSection({
   showInstitutionalLink = false,
 } = {}) {
   const ref = useRef(null);
-  const reduced = useReducedMotion();
+  const reduced = useStaticMotion();
   const title = titleProp ?? oscarSection.title;
   const paragraphs = paragraphsProp ?? oscarSection.paragraphs;
 

@@ -36,8 +36,17 @@
   }
 }
 
-/* Modo liviano (celulares y tablets): el fondo queda quieto. */
+/* Modo liviano (celulares y tablets): el fondo queda quieto y deja de ser
+   una capa fija. Solo se ve detrás del hero (las demás secciones tienen
+   fondo sólido), así que alcanza con que ocupe la primera pantalla. */
 @media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .ctb {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 100vh;
+    height: 100lvh;
+  }
+
   .ctb__svg {
     will-change: auto;
   }
